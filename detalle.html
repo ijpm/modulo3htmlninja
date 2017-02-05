@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>asd</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="dist/main.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top web-header">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./index.html">Fistrium</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav menu">
+                        <li class="active2"><a href="./index.html">Inicio</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
+                            <ul class="dropdown-menu menu">
+                                <li><a href="#">Categoria 1</a></li>
+                                <li><a href="#">Categoria 2</a></li>
+                                <li><a href="#">Categoria 3</a></li>
+                                <li><a href="#">Categoria 4</a></li>
+                                <li><a href="#">Categoria 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Registro</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                        <input type="text" class="form-control input-busqueda" placeholder="Search...">
+                        <div id="lupa">   
+                            <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+                    </form>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <main>
+            <div class="container" style="padding-top:50px">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                        <div class="panel articulo">
+                            <div class="panel-image">
+                                <a href="./detalle.html">
+                                    <img class="img-responsive" src="./dist/img/post-img.jpg">
+                                </a>
+                            </div>
+                            <div class="panel-header">
+                                <span><a href="./detalle.html">Heading</a></span>
+                            </div>                            
+                            <div class="panel-body detalle">               
+                                <p>Lorem fistrum qué dise usteer tiene musho peligro condemor ahorarr qué dise usteer. Hasta luego Lucas sexuarl a gramenawer qué dise usteer apetecan. No puedor no te digo trigo por no llamarte Rodrigor apetecan torpedo amatomaa diodenoo pupita hasta luego Lucas. Te va a hasé pupitaa te va a hasé pupitaa a wan sexuarl va usté muy cargadoo de la pradera apetecan al ataquerl diodeno qué dise usteer. Diodenoo pecador al ataquerl me cago en tus muelas pecador por la gloria de mi madre quietooor a peich sexuarl ese hombree.</p>
+                                <p>Mamaar va usté muy cargadoo mamaar sexuarl ese que llega amatomaa. Mamaar papaar papaar ese hombree ese que llega. Tiene musho peligro pecador amatomaa papaar papaar se calle ustée me cago en tus muelas fistro de la pradera torpedo condemor. Está la cosa muy malar torpedo de la pradera benemeritaar amatomaa se calle ustée no te digo trigo por no llamarte Rodrigor papaar papaar. </p>
+                                <p>Lorem fistrum qué dise usteer tiene musho peligro condemor ahorarr qué dise usteer. Hasta luego Lucas sexuarl a gramenawer qué dise usteer apetecan. No puedor no te digo trigo por no llamarte Rodrigor apetecan torpedo amatomaa diodenoo pupita hasta luego Lucas. Te va a hasé pupitaa te va a hasé pupitaa a wan sexuarl va usté muy cargadoo de la pradera apetecan al ataquerl diodeno qué dise usteer. Diodenoo pecador al ataquerl me cago en tus muelas pecador por la gloria de mi madre quietooor a peich sexuarl ese hombree.</p>
+                                <p>Mamaar va usté muy cargadoo mamaar sexuarl ese que llega amatomaa. Mamaar papaar papaar ese hombree ese que llega. Tiene musho peligro pecador amatomaa papaar papaar se calle ustée me cago en tus muelas fistro de la pradera torpedo condemor. Está la cosa muy malar torpedo de la pradera benemeritaar amatomaa se calle ustée no te digo trigo por no llamarte Rodrigor papaar papaar. </p>
+                                <div class="comentarios" id="comentarios">
+                                    <h2 id="inview-example">Comentarios</h2>
+                                    <div id="comentarios-cont" class="">
+                                        <div class="loader"></div>
+                                        <div class="nocomments">No hay comentarios</div>
+                                        <div class="errorcomments">Ocurrió un error al obtener los comentarios</div>
+                                    </div> 
+                                    <div id="comentarios-form">
+                                        <h3>Enviar Comentario</h3>
+                                        <form class="new-comment-form" novalidate >
+                                          <div class="form-group">
+                                            <label for="nombre">Nombre</label>
+                                            <input type="email" class="form-control" id="nombre" required>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="apellidos">Apellidos</label>
+                                            <input type="text" class="form-control" id="apellidos" required>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="comentario">Comentario</label>
+                                            <textarea class="form-control" rows="3" id="comentario" required></textarea>
+                                          </div>
+                                          <button type="submit" class="btn btn-comment">Enviar</button>
+                                        </form>
+                                    </div>
+                                </div>                                      
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /container -->
+        </main>
+        <footer class="footer">
+          <div class="container">
+            <div class="pull-left">
+                <a href="">Fistrium</a>
+            </div>
+            <div class="pull-right">
+                <a href="#" id="linkflecha">
+                    <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                </a>
+            </div>
+          </div>    
+        </footer>
+        <script src="dist/main.js"></script>
+    </body>
+</html>

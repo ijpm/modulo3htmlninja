@@ -1,0 +1,26 @@
+body {
+    background: $body-background-color;
+    color: $main-text-color;
+    font-family: $main-font-family;
+    font-size: $font-size-base;
+    margin: 0px;
+    padding: 0px;
+}
+main{
+    padding:30px 0 40px 0;
+    height: 100%;
+}
+// forms
+form {
+    input {
+        transition: background-color 0.25s;
+        border: 1px solid $color-primary;
+        font-size: $font-size-base;
+        border-radius: $border-radius-default;
+        &:focus {
+            outline-color: $color-primary;
+            background-color: darken(white, 5%);
+        }
+    }
+}
+

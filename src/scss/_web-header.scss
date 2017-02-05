@@ -1,0 +1,72 @@
+// variables
+$web-header-background-color: $color-primary;
+$web-header-text-color: $color-ice-princess;
+$web-header-text-color-hover: $color-white;
+$web-header-title-font: $titles-font-family;
+
+// styles
+.web-header {
+    background: $web-header-background-color;
+}
+
+.navbar-brand{
+    color:$web-header-text-color!important;
+    font-size: $font-size-h2;
+    /*padding:5px 0 0 0;*/
+    &:hover{
+        color:$color-dusk-sky;
+    }
+}
+
+#icono-buscar{
+    display: inline-block;
+    line-height: $font-size-h2;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+#icono-buscar > a > i{
+    color:$web-header-text-color;
+    font-size: $font-size-h2;
+    cursor: pointer;
+    &:hover{
+        color:$color-dusk-sky;
+    }
+}
+.menu > li > a{
+    color:$web-header-text-color!important;
+}
+.active2 > a{
+    background-color:$color-dark!important;
+    color: $color-primary!important;
+}
+.dropdown-menu{
+    background-color:$color-dark!important;
+    color: $color-primary!important;
+}
+.dropdown-menu > li{
+    background-color:$color-dark!important;
+    color: $web-header-text-color!important;
+    &:hover{
+        background-color:$web-header-text-color!important;
+        color: $color-dark!important;
+    }
+    li > a{
+        &:hover{
+            color: $color-dark!important;
+        }
+    }
+}
+.dropdown-menu > {
+    
+}
+#lupa{
+    display: inline-block;
+    line-height: $font-size-h2;
+    font-size: $font-size-h2;    
+    vertical-align: middle;
+    padding-left: 5px;
+    a>i{
+        color: $web-header-text-color;
+    }
+}

@@ -1,0 +1,38 @@
+// font families
+$main-font-family: "Roboto", sans-serif;
+$titles-font-family: "Roboto", sans-serif;
+$body-font-family: $main-font-family;
+
+// font sizes
+$font-size-base: 16px;
+$font-size-small: $font-size-base - 6px;
+$font-size-large: $font-size-base + 6px;
+$font-size-h1: $font-size-base + 15px;
+$font-size-h2: $font-size-base + 12px;
+$font-size-h3: $font-size-base + 9px;
+$font-size-h4: $font-size-base + 6px;
+$font-size-h5: $font-size-base + 3px;
+$font-size-h6: $font-size-base;
+
+// colors
+$color-boss-black: #343B4F;
+$color-dusk-sky: #CFCFE6;
+$color-ice-princess: #EBF3FF;
+$color-white: #FFFFFF;
+$color-dark: #0E0C0C;
+
+// components colors
+$color-primary: $color-boss-black;
+$color-secondary: $color-dusk-sky;
+
+$main-text-color: $color-dark;
+$body-background-color: $color-ice-princess;
+
+// responsive breakpoints
+$large-screen-width: 1024px; // iPad en landscape o superior
+$medium-screen-width: 768px; // iPad portrait
+$small-screen-width: $medium-screen-width - 1; // smartphones
+
+// border radius
+$border-radius-default: 5px;
+$fa-font-path:"//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
