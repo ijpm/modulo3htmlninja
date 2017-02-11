@@ -11,13 +11,18 @@
 		text-decoration: none;
 	}
 }
+.panel-image{
+	max-height: 146px!important;
+	height: 146px!important;
+	overflow: hidden!important;
+}
+
 .panel-autor{
 	padding:10px 0px 10px 15px;
 	clear: both;
 	overflow: hidden;
 	div{
-		padding-left:10px;
-		float:left;
+		padding-left:40px;
 	}
 	img{
 		margin-top:5px;
@@ -26,6 +31,7 @@
 		border-radius:50%;
 	}
 }
+
 .panel-body{
 	padding:5px 10px 0 10px;
 	p>a{

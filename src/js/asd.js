@@ -17,5 +17,3 @@ function pintarComentarios(){
 		pintados=true;
 	};
 }
-
-localStorage.luy="cheng";

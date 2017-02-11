@@ -13,6 +13,8 @@ var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 var envify = require('envify/custom');
 var gutil = require('gulp-util');
+var imagemin = require('gulp-imagemin');
+var responsive = require('gulp-responsive');
 
 var fontAwesome = {
     fontsTaskName: 'fontTask',
@@ -50,9 +52,48 @@ var uglifyConfig = {
     dest: './dist/'
 };
 
+var imagesConfig = {
+    imagesTaskName: "optimize-images",
+    src: "src/img/*",
+    dest: "./dist/img/",
+    responsive: {
+        'ds.png': [
+            {
+                width: 1140,
+                rename: { suffix: '-1140px' }
+            },
+            {
+                width: 940,
+                rename: { suffix: '-940px' }
+            },
+            {
+                width: 720,
+                rename: { suffix: '-720px' }
+            },
+            {
+                width: 384,
+                rename: { suffix: '-384px' }
+            }
+        ],
+        'no-user.png': [
+            {
+                width: 30,
+                rename: { suffix: '-30px' }
+            }
+        ]
+    }
+};
+
+// optimiza las imagenes
+gulp.task(imagesConfig.imagesTaskName, function(){
+    gulp.src(imagesConfig.src)
+    .pipe(responsive(imagesConfig.responsive))  // genera las imágenes responsive
+    .pipe(imagemin())   // optimiza el tamaño de las imagenes
+    .pipe(gulp.dest(imagesConfig.dest));
+});
 
 // definimos la tarea por defecto
-gulp.task("default", [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName, fontAwesome.fontsTaskName], function(){
+gulp.task("default", [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName, fontAwesome.fontsTaskName, imagesConfig.imagesTaskName], function(){
 
     // arrancar el servidor de browser sync
     browserSync.init({
@@ -117,6 +158,6 @@ gulp.task(uglifyConfig.uglifyTaskName, function(){
     .pipe(notify("JS Minificado"));
 });
 gulp.task(fontAwesome.fontsTaskName, function() {
-    gulp.src(fontAwesome.fonts + '**.*')
+    gulp.src(fontAwesome.fonts + '**/*')
     .pipe(gulp.dest('./dist/fonts'));
 });
