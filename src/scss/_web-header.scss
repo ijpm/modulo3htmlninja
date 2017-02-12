@@ -34,7 +34,7 @@ $web-header-title-font: $titles-font-family;
     }
 }
 .menu > li > a{
-    color:$web-header-text-color!important;
+    color:$web-header-text-color!important;  
 }
 .active2 > a{
     background-color:$color-dark!important;
@@ -45,16 +45,14 @@ $web-header-title-font: $titles-font-family;
     color: $color-primary!important;
 }
 .dropdown-menu > li{
-    background-color:$color-dark!important;
-    color: $web-header-text-color!important;
+    background-color:$color-dark;
+    color: $web-header-text-color;
     &:hover{
-        background-color:$web-header-text-color!important;
-        color: $color-dark!important;
+        background-color:$web-header-text-color;
+        color: $color-dark;
     }
-    li > a{
-        &:hover{
-            color: $color-dark!important;
-        }
+    a:hover{
+        color: $color-dark!important;
     }
 }
 .dropdown-menu > {

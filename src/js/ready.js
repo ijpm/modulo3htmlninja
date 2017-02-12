@@ -31,14 +31,13 @@ $(document).ready(function(){
 		$(this).html(fechainput);
 	});
 
+	/* Leo las fechas de los articulos y les aplico la visaulizacion correcta */
 	var minuto=new Date(fecha.getTime() - 60*1000);
 	var hora=new Date(fecha.getTime() - 60*60*1000);
 	var dia=new Date(fecha.getTime() - 24*60*60*1000);
 	var semana=new Date(fecha.getTime() - (24*60*60*1000)*7);
-	var dias_semana=Array('Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo');
-	/* Leo las fechas de los articulos y les aplico la visaulizacion correcta */
-	$('.fecha-art').each(function (index) {
-		
+	var dias_semana=Array('Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo');	
+	$('.fecha-art').each(function (index) {		
 		fechainput=new Date($(this).html());
 		if (semana>fechainput) {
 			if (fechainput.getDate()<10) {
@@ -68,7 +67,6 @@ $(document).ready(function(){
 				var segundos=fechainput.getSeconds();
 			}	
 			$(this).html(dia2+'/'+mes+'/'+fechainput.getFullYear()+' | '+horas+':'+minutos+':'+segundos);
-
 		}else if(dia>fechainput){
 			$(this).html('Publicado el '+dias_semana[fechainput.getDay()]);
 		}else if(hora>fechainput){

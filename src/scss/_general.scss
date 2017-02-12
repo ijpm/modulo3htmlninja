@@ -11,11 +11,6 @@
 		text-decoration: none;
 	}
 }
-.panel-image{
-	max-height: 146px!important;
-	height: 146px!important;
-	overflow: hidden!important;
-}
 
 .panel-autor{
 	padding:10px 0px 10px 15px;
@@ -39,6 +34,7 @@
 		text-decoration: none;
 	}
 }
+
 .comment-like-box{
 	padding: 5px 0;
 	overflow: hidden;
@@ -51,6 +47,7 @@
 		text-decoration: none;
 	}
 }
+
 .footer{
 	position: fixed;
 	bottom: 0;
@@ -59,7 +56,7 @@
 	line-height: 40px;
 	font-size: 20px;
 	text-align: middle;
-	background-color: $color-primary;
+	background-color: $web-header-background-color;
 	color: $color-ice-princess;
 	div>a{
 		color: $color-ice-princess;
@@ -73,56 +70,4 @@
 .comentario{
 	padding: 10px 0;
 	border-top:1px solid #000;
-}
-
-.cargando{
-	.loader {
-		border: 10px solid #f3f3f3;
-		border-top: 10px solid $color-boss-black;
-		border-radius: 50%;
-		width: 100px;
-		height: 100px;
-		animation: spin 2s linear infinite;
-		margin: 100px auto;
-
-	}
-}
-
-.nocomments{
-	display:none;
-}
-.errorcomments{
-		display: none;
-	}
-.no-hay{
-	.nocomments{
-		display: block!important;
-	}
-}
-
-.error{
-	.errorcomments{
-		display: block!important;
-	}
-}
-
-@keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-}
-
-.btn-comment{
-	background-color: $color-boss-black!important;
-	color:$color-ice-princess!important;
-	&:hover{
-		background-color:$color-dusk-sky!important;
-		color:$color-boss-black!important;
-	}
-}
-
-@media (max-width: 767px) { 
-	.input-busqueda{
-		width: 80%;
-		display: inline-block;
-	}
 }

@@ -1,0 +1,44 @@
+.cargando{
+	.loader {
+		border: 10px solid #f3f3f3;
+		border-top: 10px solid $color-boss-black;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		animation: spin 2s linear infinite;
+		margin: 100px auto;
+
+	}
+}
+
+.nocomments{
+	display:none;
+}
+.errorcomments{
+		display: none;
+	}
+.no-hay{
+	.nocomments{
+		display: block!important;
+	}
+}
+
+.error{
+	.errorcomments{
+		display: block!important;
+	}
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.btn-comment{
+	background-color: $color-boss-black!important;
+	color:$color-ice-princess!important;
+	&:hover{
+		background-color:$color-dusk-sky!important;
+		color:$color-boss-black!important;
+	}
+}
