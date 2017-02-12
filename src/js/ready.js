@@ -2,18 +2,41 @@ var $ = require('jquery');
 
 
 $(document).ready(function(){
-	if (!localStorage.likes) {
-		localStorage.likes=[];
+	
+	var removeItemFromArr = ( arr, item ) => {
+	    var i = arr.indexOf( item );
+	    i !== -1 && arr.splice( i, 1 );
 	};
+
+	if (!localStorage.likes) {
+		localStorage.likes="";
+	};
+
 	$('.comment-like').each(function () {
+
 		var nombre = $(this).data("nombre");
-		if (localStorage.likes.indexOf(nombre)!== -1) {
+		var likes=localStorage.likes.split(',');
+
+		if (likes.indexOf(nombre)!== -1) {
 			$(this).html('<i class="fa fa-heart" aria-hidden="true"></i>');
 		}
+
 		$(this).click(function(){
-			localStorage.likes.push(nombre);
+
+			var nombre = $(this).data("nombre");
+			var likes=localStorage.likes.split(',');
+			if (likes.indexOf(nombre)!== -1) {
+				return false;
+			}else{
+				$(this).html('<i class="fa fa-heart" aria-hidden="true"></i>');
+				likes.push(nombre);
+				localStorage.likes=likes.join();
+			}
+
 		});
+
 	});
+
 
 
 	/* Me lleno todos los articulos con fechas random*/
